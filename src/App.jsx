@@ -1,6 +1,6 @@
 import './App.css';
 import Buttons from './components/Buttons';
-
+import StatefulComponents from './components/StatefulComponents';
 
 const user = {
   name: 'Valeriya',
@@ -79,6 +79,7 @@ export default function App() {
     <>
       <PersonalInformation />
       <SeasonInf />
+      <StatefulComponents />
     </>
   );
 }
