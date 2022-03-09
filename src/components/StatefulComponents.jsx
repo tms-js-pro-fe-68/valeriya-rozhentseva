@@ -4,16 +4,13 @@ export default function StatefulComponents() {
   const [color, setColor] = useState('blue');
   const [count, setCount] = useState(0);
   function changeClick() {
-    if (color === 'blue') {
-      return setColor('green');
-    }
-    return setColor('blue');
+      return color === 'blue' ? setColor('green') : setColor('blue')
   }
 
   return (
     <>
       <p style={{ fontSize: '30px', textAlign: 'center' }}>
-        <b>Сlick on the button below:</b>
+        <b>You click {count} times</b>
       </p>
       <button
         style={{
@@ -28,9 +25,8 @@ export default function StatefulComponents() {
           setCount(count + 1);
         }}
         type="button"
-        id="button"
       >
-        you clicked on me {count} times
+        click to change button color
       </button>
     </>
   );
