@@ -8,5 +8,5 @@ ReactDOM.render(
     <App />
   </React.StrictMode>,
   document.getElementById('root') // на дипломе будут спрашивать (в этот див будет рендериться наше приложение
-  //точка входа)
+  // точка входа)
 )
