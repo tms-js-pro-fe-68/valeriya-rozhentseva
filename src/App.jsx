@@ -1,6 +1,6 @@
 import './App.css';
 import Buttons from './components/Buttons';
-
+import Cocktails from './components/ListOfElements';
 
 const user = {
   name: 'Valeriya',
@@ -79,6 +79,7 @@ export default function App() {
     <>
       <PersonalInformation />
       <SeasonInf />
+      <Cocktails />
     </>
   );
 }
