@@ -3,13 +3,14 @@ import React, { useState } from 'react';
 export default function StatefulComponents() {
   const [color, setColor] = useState('blue');
   const [count, setCount] = useState(0);
+  
   function changeClick() {
-      return color === 'blue' ? setColor('green') : setColor('blue')
+    return setColor((prevColor) => (prevColor === 'blue' ? 'green' : 'blue'));
   }
 
   return (
     <>
-      <p style={{ fontSize: '30px', textAlign: 'center' }}>
+      <p style={{ fontSize: '35px', textAlign: 'center', color: '#92054D' }}>
         <b>You click {count} times</b>
       </p>
       <button
