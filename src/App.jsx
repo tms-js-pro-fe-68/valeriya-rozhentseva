@@ -1,5 +1,6 @@
 import './App.css';
 import Buttons from './components/Buttons';
+import BruteForce from './components/getPassword';
 
 
 const user = {
@@ -77,6 +78,7 @@ function SeasonInf() {
 export default function App() {
   return (
     <>
+      <BruteForce />
       <PersonalInformation />
       <SeasonInf />
     </>
