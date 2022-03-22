@@ -1,6 +1,49 @@
-button {
-  font-size: calc(10px + 2vmin);
+body {
+  background: rgb(189, 149, 149);
 }
 
+h1 {
+  text-align: center;
+  font-size: 38px;
+  color: rgb(163, 60, 60);
+  font-family: 'Work Sans', 'sans-serif';
+}
+.mainblock {
+  width: 650px;
+  background-color: silver;
+  border: 10px solid red;
+  margin: 20px auto;
+  padding: 0 30px;
+}
 
+.mainblock_h2 {
+  color: rgb(163, 60, 60);
+  font-family: 'Work Sans', 'sans-serif';
+  text-align: center;
+  font-size: 30px;
+}
 
+.form_div{
+  display: flex;
+  flex-direction: column;
+}
+
+.label_style{
+  font-family: 'Work Sans';
+  color: rgb(51, 47, 47);
+  margin-bottom: 20px;
+}
+
+label{
+  color: red;
+  font-weight: bold;
+}
+
+button {
+  margin: 20px auto;
+  background: rgb(163, 60, 60);
+  padding: 5px 20px;
+  font-size: 20px;
+  color: silver;
+  font-family: 'Work Sans', 'sans-serif';
+}
