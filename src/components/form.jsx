@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { Formik, Form, useField } from 'formik';
 
@@ -18,7 +19,7 @@ function MyCheckbox({ children, ...props }) {
   const [field, meta] = useField({ ...props, type: 'checkbox' });
   return (
     <div>
-      <label className="checkbox-input">
+      <label htmlFor={props.id || props.name} className="checkbox-input">
         <input type="checkbox" {...field} {...props} />
         {children}
       </label>
