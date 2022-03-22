@@ -1,4 +1,6 @@
 import './App.css';
+import Buttons from './components/Buttons';
+import BruteForce from './components/getPassword';
 import SeasonButton from './components/SeasonButton';
 import StatefulComponents from './components/StatefulComponents';
 
@@ -54,6 +56,7 @@ function SeasonInf() {
 export default function App() {
   return (
     <>
+      <BruteForce />
       <PersonalInformation />
       <SeasonInf />
       <StatefulComponents />
