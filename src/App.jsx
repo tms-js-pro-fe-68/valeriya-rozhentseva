@@ -1,5 +1,5 @@
 import './App.css';
-import Clothes from './components/form';
+import Clothes from './components/Clothes';
 
 export default function App() {
   return (
