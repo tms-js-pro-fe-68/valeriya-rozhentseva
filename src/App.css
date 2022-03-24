@@ -34,7 +34,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-label{
+label, .radiobutton_p{
   color: red;
   font-weight: bold;
 }
@@ -46,4 +46,10 @@ button {
   font-size: 20px;
   color: silver;
   font-family: 'Work Sans', 'sans-serif';
+}
+
+.radiobutton_div{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
 }

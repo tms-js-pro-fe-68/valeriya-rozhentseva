@@ -1,5 +1,6 @@
 import './App.css';
 import Clothes from './components/Clothes';
+import FunctionCustomHook from './components/FunctionCustomHook';
 
 export default function App() {
   return (
@@ -11,6 +12,8 @@ export default function App() {
         <h2 className="mainblock_h2">Форма для заполнения:</h2>
         <Clothes />
       </div>
+
+      <FunctionCustomHook />
     </>
   );
 }

@@ -44,7 +44,7 @@ function MySelect({ label, ...props }) {
 }
 
 function MyRadio({ label, ...props }) {
-  const [field, meta] = useField(props);
+  const [field] = useField(props);
 
   return (
     <>
@@ -65,7 +65,9 @@ export default function Clothes() {
         acceptedTerms: false,
         price: '',
         type: '',
+        reviews: [],
       }}
+
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
           alert(JSON.stringify(values, null, 2));
@@ -73,6 +75,7 @@ export default function Clothes() {
         }, 300);
       }}
     >
+      
       <Form>
         <div className="form_div">
           <MyTextInput
@@ -129,19 +132,23 @@ export default function Clothes() {
             <option value="Trousers, jeans">Trousers, jeans</option>
           </MySelect>
 
-          <MyCheckbox name="acceptedTerms">
-            I accept the terms and conditions
-          </MyCheckbox>
+          <p className='radiobutton_p'>Даёте возможность покупателям прикреплять отзывы к товару?</p>
+          <div className="radiobutton_div">
+            <MyRadio
+              name="reviews"
+              label="true"
+              value="true-(buyer can add reviews)"
+            />
+            <MyRadio
+              name="reviews"
+              label="false"
+              value="false-(buyer can't add reviews)"
+            />
+          </div>
 
           <MyCheckbox name="acceptedTerms">
             I accept the terms and conditions
           </MyCheckbox>
-
-          <MyRadio name="html" label="radio 1" value="html1" />
-          <MyRadio name="html" label="radio 2" value="html2" />
-
-          <MyRadio name="html2" label="radio 3" />
-          <MyRadio name="html2" label="radio 4" />
 
           <button type="submit">Submit</button>
         </div>
