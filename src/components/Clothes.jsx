@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { Formik, Form, useField } from 'formik';
+import { object, string } from 'yup';
+
 
 function MyTextInput({ label, ...props }) {
   const [field, meta] = useField(props);
@@ -67,6 +69,14 @@ export default function Clothes() {
         type: '',
         reviews: [],
       }}
+      validationSchema = {
+        object().shape({
+          name: string().required(),
+          type: string().required()
+          
+        })
+      }
+      validateOnMount true
 
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {

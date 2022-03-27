@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-function useGetRequest(api){
-    const [items, setItems] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-    const [errorMessage, setErrorMessage] = useState(null);
+function useGetRequest(api) {
+  const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
 
-    useEffect(() => {
+  useEffect(() => {
     setErrorMessage(null);
     setIsLoading(true);
     fetch(api)
@@ -23,28 +23,30 @@ function useGetRequest(api){
     };
   }, []);
 
-    return [isLoading, errorMessage, items];
+  return {isLoading, errorMessage, items};
 }
 
-export default function FunctionCustomHook(){
-    const [isLoading, errorMessage, items] = useGetRequest('https://thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail');
+export default function FunctionCustomHook() {
+  const { isLoading, errorMessage, items } = useGetRequest(
+    'https://thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail',
+  );
 
-    return (
-        <div style={{width: '600px', margin: '10px auto', border: '6px solid red' }}>
-            <h2 style={{fontSize: '25px', color: 'silver', textAlign: 'center'}}>
-        List of the most popular cocktails: 
+  return (
+    <div
+      style={{ width: '600px', margin: '10px auto', border: '6px solid red' }}
+    >
+      <h2 style={{ fontSize: '25px', color: 'silver', textAlign: 'center' }}>
+        List of the most popular cocktails:
       </h2>
       <p>{isLoading && 'Loading..'}</p>
       <p>{errorMessage}</p>
       <ul>
         {items.map(({ idDrink, strDrink }) => (
-          <li style={{color: 'red', fontSize: '17px'}} key={idDrink}>
+          <li style={{ color: 'red', fontSize: '17px' }} key={idDrink}>
             <i>{strDrink}</i>
           </li>
         ))}
       </ul>
-        </div>
-
-
-    )
+    </div>
+  );
 }
