@@ -1,19 +1,15 @@
-import './App.css';
-import Clothes from './components/Clothes';
-import FunctionCustomHook from './components/FunctionCustomHook';
+// import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import LoginPage from './pages/LoginPage';
+import HomePage from './pages/Homepage';
 
 export default function App() {
   return (
-    <>
-      <h1>
-        Добавь свой товар, <br /> чтобы его могли купить миллионы людей!
-      </h1>
-      <div className="mainblock">
-        <h2 className="mainblock_h2">Форма для заполнения:</h2>
-        <Clothes />
-      </div>
-
-      <FunctionCustomHook />
-    </>
-  );
+    <Router>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/" element={<HomePage />} exact />
+      </Routes>
+    </Router>
+  )
 }

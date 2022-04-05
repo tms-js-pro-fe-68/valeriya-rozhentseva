@@ -3,7 +3,6 @@ import React from 'react';
 import { Formik, Form, useField } from 'formik';
 import { object, string } from 'yup';
 
-
 function MyTextInput({ label, ...props }) {
   const [field, meta] = useField(props);
   return (
@@ -47,7 +46,6 @@ function MySelect({ label, ...props }) {
 
 function MyRadio({ label, ...props }) {
   const [field] = useField(props);
-
   return (
     <>
       <input type="radio" id="html" {...field} {...props} />
@@ -69,15 +67,12 @@ export default function Clothes() {
         type: '',
         reviews: [],
       }}
-      validationSchema = {
-        object().shape({
-          name: string().required(),
-          type: string().required()
-          
-        })
-      }
-      validateOnMount true
-
+      validationSchema={object().shape({
+        name: string().required(),
+        type: string().required(),
+      })}
+      validateOnMount
+      true
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
           alert(JSON.stringify(values, null, 2));
@@ -85,7 +80,6 @@ export default function Clothes() {
         }, 300);
       }}
     >
-      
       <Form>
         <div className="form_div">
           <MyTextInput
@@ -142,7 +136,9 @@ export default function Clothes() {
             <option value="Trousers, jeans">Trousers, jeans</option>
           </MySelect>
 
-          <p className='radiobutton_p'>Даёте возможность покупателям прикреплять отзывы к товару?</p>
+          <p className="radiobutton_p">
+            Даёте возможность покупателям прикреплять отзывы к товару?
+          </p>
           <div className="radiobutton_div">
             <MyRadio
               name="reviews"
@@ -160,7 +156,7 @@ export default function Clothes() {
             I accept the terms and conditions
           </MyCheckbox>
 
-          <button type="submit">Submit</button>
+          <button type="submit">Отправить</button>
         </div>
       </Form>
     </Formik>

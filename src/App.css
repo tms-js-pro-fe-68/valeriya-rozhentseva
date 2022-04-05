@@ -1,24 +1,22 @@
 body {
-  background: rgb(189, 149, 149);
+  background: grey;
 }
 
 h1 {
   text-align: center;
-  font-size: 38px;
-  color: rgb(163, 60, 60);
-  font-family: 'Work Sans', 'sans-serif';
+  font-size: 30px;
+  color: blue;
 }
 .mainblock {
   width: 650px;
   background-color: silver;
-  border: 10px solid red;
+  border: 10px solid blue;
   margin: 20px auto;
   padding: 0 30px;
 }
 
 .mainblock_h2 {
-  color: rgb(163, 60, 60);
-  font-family: 'Work Sans', 'sans-serif';
+  color: blue;
   text-align: center;
   font-size: 30px;
 }
@@ -29,23 +27,21 @@ h1 {
 }
 
 .label_style{
-  font-family: 'Work Sans';
-  color: rgb(51, 47, 47);
+  color: blue;
   margin-bottom: 20px;
 }
 
 label, .radiobutton_p{
-  color: red;
+  color: blue;
   font-weight: bold;
 }
 
 button {
   margin: 20px auto;
-  background: rgb(163, 60, 60);
   padding: 5px 20px;
   font-size: 20px;
-  color: silver;
-  font-family: 'Work Sans', 'sans-serif';
+  color: blue;
+  border: 3px solid blue;
 }
 
 .radiobutton_div{
