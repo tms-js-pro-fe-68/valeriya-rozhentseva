@@ -1,15 +1,24 @@
 // import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import LoginPage from './pages/LoginPage';
 import HomePage from './pages/Homepage';
+import theme from '../theme';
 
 export default function App() {
+  const queryClient = new QueryClient();
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/" element={<HomePage />} exact />
-      </Routes>
-    </Router>
-  )
+    <ThemeProvider theme={theme}>
+      <QueryClientProvider client={queryClient}>
+        <Router>
+          <Routes>
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/" element={<HomePage />} exact />
+          </Routes>
+        </Router>
+      </QueryClientProvider>
+    </ThemeProvider>
+  );
 }

@@ -1,12 +1,18 @@
 import AppBar from '../components/AppBar';
+import CustomHookWithQuery from '../components/CustomHookWithQuery';
+import HomePageContextProvider from '../components/HomePageContext';
 import Page from '../components/Page';
 import TodoListPropsStyle from '../components/TodoListPropsStyle';
 
+
 export default function Homepage() {
-  return(
-    <Page>
-    <AppBar />
-    <TodoListPropsStyle />
-    </Page>
-  )
+  return (
+    <HomePageContextProvider>
+      <Page>
+        <AppBar />
+        <TodoListPropsStyle />
+        <CustomHookWithQuery />
+      </Page>
+    </HomePageContextProvider>
+  );
 }
