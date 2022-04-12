@@ -16,6 +16,50 @@ button {
   color: #ffbcd0;
 }
 
+.button_seasons {
+  width: 100px;
+  background: #fa608d;
+  display: block;
+  margin: 15px auto;
+}
+
+.div_personal-inf {
+  width: 600px;
+  background: #ffbcd0;
+  margin: auto;
+  padding: 70px;
+}
+
+.button_personal-inf {
+  display: block;
+  width: 300px;
+  background: #fa608d;
+  font-size: 19px;
+  margin: 0 auto;
+  color: #92054d;
+}
+
+.div_seasons {
+  width: 600px;
+  background: #92054d;
+  margin: 40px auto;
+  padding: 70px;
+}
+
+.div_cocktails {
+  background: #975979;
+  margin: 100px auto;
+  width: 500px;
+  padding: 40px;
+}
+
+.h2_cocktails {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #ffbcd0;
+}
+
 .li_cocktails {
   list-style-type: circle;
   font-size: 20px;
