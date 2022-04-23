@@ -23,7 +23,7 @@ function useGetRequest(api) {
     };
   }, []);
 
-  return {isLoading, errorMessage, items};
+  return { isLoading, errorMessage, items };
 }
 
 export default function FunctionCustomHook() {
@@ -33,7 +33,7 @@ export default function FunctionCustomHook() {
 
   return (
     <div
-      style={{ width: '600px', margin: '10px auto', border: '6px solid red' }}
+      style={{ width: '600px', margin: '15px auto', border: '3px solid grey' }}
     >
       <h2 style={{ fontSize: '25px', color: 'silver', textAlign: 'center' }}>
         List of the most popular cocktails:
@@ -42,8 +42,8 @@ export default function FunctionCustomHook() {
       <p>{errorMessage}</p>
       <ul>
         {items.map(({ idDrink, strDrink }) => (
-          <li style={{ color: 'red', fontSize: '17px' }} key={idDrink}>
-            <i>{strDrink}</i>
+          <li style={{ color: 'grey', fontSize: '20px', textAlign: 'center' }} key={idDrink}>
+            {strDrink}
           </li>
         ))}
       </ul>

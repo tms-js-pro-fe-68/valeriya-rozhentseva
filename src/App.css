@@ -1,6 +1,3 @@
-body {
-  background: grey;
-}
 
 h1 {
   text-align: center;
@@ -24,6 +21,11 @@ h1 {
 .form_div{
   display: flex;
   flex-direction: column;
+  border: 3px solid grey;
+  width: 700px;
+  margin: 10px auto;
+  padding: 15px;
+  background-color:peru;
 }
 
 .label_style{
@@ -36,7 +38,7 @@ label, .radiobutton_p{
   font-weight: bold;
 }
 
-button {
+button.Submit {
   margin: 20px auto;
   padding: 5px 20px;
   font-size: 20px;

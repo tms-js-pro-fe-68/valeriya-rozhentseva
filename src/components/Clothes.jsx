@@ -156,7 +156,7 @@ export default function Clothes() {
             I accept the terms and conditions
           </MyCheckbox>
 
-          <button type="submit">Отправить</button>
+          <button className='Submit' type="submit">Отправить</button>
         </div>
       </Form>
     </Formik>
