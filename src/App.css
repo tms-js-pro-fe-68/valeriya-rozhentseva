@@ -1,7 +1,56 @@
-button {
-  font-size: calc(10px + 2vmin);
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  color: blue;
+}
+.mainblock {
+  width: 650px;
+  background-color: silver;
+  border: 10px solid blue;
+  margin: 20px auto;
+  padding: 0 30px;
 }
 
+.mainblock_h2 {
+  color: blue;
+  text-align: center;
+  font-size: 30px;
+}
+
+.form_div{
+  display: flex;
+  flex-direction: column;
+  border: 3px solid grey;
+  width: 700px;
+  margin: 10px auto;
+  padding: 15px;
+  background-color:peru;
+}
+
+.label_style{
+  color: blue;
+  margin-bottom: 20px;
+}
+
+label, .radiobutton_p{
+  color: blue;
+  font-weight: bold;
+}
+
+button.Submit {
+  margin: 20px auto;
+  padding: 5px 20px;
+  font-size: 20px;
+  color: blue;
+  border: 3px solid blue;
+}
+
+.radiobutton_div{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
 .button_seasons {
   width: 100px;
   background: #fa608d;

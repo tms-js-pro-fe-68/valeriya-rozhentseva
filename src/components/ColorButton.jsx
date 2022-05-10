@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function StatefulComponents() {
+export default function ColorButton() {
   const [color, setColor] = useState('blue');
   const [count, setCount] = useState(0);
   
@@ -10,14 +10,14 @@ export default function StatefulComponents() {
 
   return (
     <>
-      <p style={{ fontSize: '35px', textAlign: 'center', color: '#92054D' }}>
+      <p style={{ fontSize: '30px', textAlign: 'center', color: 'grey' }}>
         <b>You click {count} times</b>
       </p>
       <button
         style={{
           background: color,
           color: 'white',
-          width: '500px',
+          width: '300px',
           display: 'block',
           margin: '10px auto',
         }}
