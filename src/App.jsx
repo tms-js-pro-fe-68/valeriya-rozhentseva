@@ -1,4 +1,5 @@
 import './App.css';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material';
 import { QueryClient, QueryClientProvider } from 'react-query';
@@ -12,6 +13,7 @@ export default function App() {
   const queryClient = new QueryClient();
 
   return (
+
     <ThemeProvider theme={theme}>
       <QueryClientProvider client={queryClient}>
         <Router>
@@ -23,5 +25,6 @@ export default function App() {
         </Router>
       </QueryClientProvider>
     </ThemeProvider>
+
   );
 }
